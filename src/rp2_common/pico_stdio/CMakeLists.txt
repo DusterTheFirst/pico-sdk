@@ -1,7 +1,7 @@
 if (NOT TARGET pico_stdio)
     pico_add_impl_library(pico_stdio)
 
-    target_include_directories(pico_stdio INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+    target_include_directories(pico_stdio SYSTEM INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
     target_sources(pico_stdio INTERFACE
             ${CMAKE_CURRENT_LIST_DIR}/stdio.c

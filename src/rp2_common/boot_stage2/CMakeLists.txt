@@ -30,7 +30,7 @@ endif()
 set(PICO_BOOT_STAGE2_DIR "${CMAKE_CURRENT_LIST_DIR}" CACHE INTERNAL "")
 
 add_library(boot_stage2_headers INTERFACE)
-target_include_directories(boot_stage2_headers INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+target_include_directories(boot_stage2_headers SYSTEM INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
 # by convention the first source file name without extension is used for the binary info name
 function(pico_define_boot_stage2 NAME SOURCES)

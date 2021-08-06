@@ -54,7 +54,7 @@ if (PICO_CMSIS_CORE_PATH)
     target_sources(cmsis_core INTERFACE
             ${PICO_CMSIS_CORE_PATH}/CMSIS/Device/${PICO_CMSIS_VENDOR}/${PICO_CMSIS_DEVICE}/Source/system_${PICO_CMSIS_DEVICE}.c
     )
-    target_include_directories(cmsis_core INTERFACE
+    target_include_directories(cmsis_core SYSTEM INTERFACE
             ${PICO_CMSIS_CORE_PATH}/CMSIS/Core/Include
             ${PICO_CMSIS_CORE_PATH}/CMSIS/Device/${PICO_CMSIS_VENDOR}/${PICO_CMSIS_DEVICE}/Include
     )

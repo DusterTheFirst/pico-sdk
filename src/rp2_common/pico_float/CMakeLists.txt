@@ -6,7 +6,7 @@ if (NOT TARGET pico_float)
     pico_add_impl_library(pico_float_compiler)
 
     add_library(pico_float_headers INTERFACE)
-    target_include_directories(pico_float_headers INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+    target_include_directories(pico_float_headers SYSTEM INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
     # add alias "default" which is just rom.
     add_library(pico_float_default INTERFACE)

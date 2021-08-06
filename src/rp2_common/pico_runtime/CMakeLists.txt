@@ -4,7 +4,7 @@ target_sources(pico_runtime INTERFACE
         ${CMAKE_CURRENT_LIST_DIR}/runtime.c
 )
 
-target_include_directories(pico_runtime INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+target_include_directories(pico_runtime SYSTEM INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
 target_link_libraries(pico_runtime INTERFACE
         hardware_uart

@@ -16,7 +16,7 @@ if (NOT TARGET pico_int64_ops)
             $<IF:$<BOOL:$<TARGET_PROPERTY:PICO_TARGET_INT64_OPS_IMPL>>,$<TARGET_PROPERTY:PICO_TARGET_INT64_OPS_IMPL>,${PICO_DEFAULT_INT64_OPS_IMPL}>)
 
     pico_add_impl_library(pico_int64_ops_pico)
-    target_include_directories(pico_int64_ops_pico INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+    target_include_directories(pico_int64_ops_pico SYSTEM INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
     target_sources(pico_int64_ops_pico INTERFACE
             ${CMAKE_CURRENT_LIST_DIR}/pico_int64_ops_aeabi.S

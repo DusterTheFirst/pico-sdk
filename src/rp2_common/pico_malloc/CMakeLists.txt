@@ -6,7 +6,7 @@ if (NOT TARGET pico_malloc)
             ${CMAKE_CURRENT_LIST_DIR}/pico_malloc.c
             )
 
-    target_include_directories(pico_malloc INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+    target_include_directories(pico_malloc SYSTEM INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
 
     pico_wrap_function(pico_malloc malloc)
     pico_wrap_function(pico_malloc calloc)
